@@ -1,0 +1,8 @@
+<resources>
+    <!-- Custom colors for a light, pastel theme -->
+    <color name="light_blue">#A6E3E9</color>
+    <color name="deep_blue">#71C9CE</color>
+    <color name="pastel_pink">#FFB3C1</color>
+    <color name="very_light_gray">#FAFAFA</color>
+    <color name="dark_gray">#333333</color>
+</resources>

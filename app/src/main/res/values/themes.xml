@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- App Theme: Light and minimal design -->
+    <style name="Theme.QuizzAppDAT153" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimaryDark">@color/deep_blue</item>
+        <item name="colorAccent">@color/pastel_pink</item>
+
+        <!-- Background and text -->
+        <item name="android:windowBackground">@color/very_light_gray</item>
+        <item name="android:textColorPrimary">@color/dark_gray</item>
+    </style>
+
+</resources>
