@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import hvl.dat153.quizzappdat153.data.NamePhotoPair;
 
-public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder> {
+class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder> {
 
     private final List<NamePhotoPair> namePhotoPairs;
 
@@ -35,7 +35,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
             holder.imagePhoto.setImageResource(pair.getPhotoResId());
         } else {
             // Prevent crash by skipping invalid entries if they somehow exist
-            holder.textName.setText("Unknown");
+            holder.textName.setText(holder.itemView.getContext().getString(R.string.unknown_text));
             holder.imagePhoto.setVisibility(View.GONE);  // Hide the image if the data is invalid
         }
     }

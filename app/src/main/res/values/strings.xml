@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QuizzAppDAT153</string>
+    <string name="unknown_text">Unknown</string>
 </resources>
