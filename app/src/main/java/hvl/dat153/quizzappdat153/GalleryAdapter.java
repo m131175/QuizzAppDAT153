@@ -32,7 +32,7 @@ class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryViewHold
 
         if (pair != null) {
             holder.textName.setText(pair.getName());
-            holder.imagePhoto.setImageResource(pair.getPhotoResId());
+            holder.imagePhoto.setImageResource(((NamePhotoPair.ResourcePhoto)pair).getPhotoResId());
         } else {
             // Prevent crash by skipping invalid entries if they somehow exist
             holder.textName.setText(holder.itemView.getContext().getString(R.string.unknown_text));

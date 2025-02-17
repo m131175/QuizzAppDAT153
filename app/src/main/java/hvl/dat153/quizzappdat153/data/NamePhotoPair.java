@@ -2,36 +2,49 @@ package hvl.dat153.quizzappdat153.data;
 
 import android.graphics.Bitmap;
 
-public class NamePhotoPair {
+public abstract class NamePhotoPair {
     private final String name;
-    private final int photoResId;  // -1 means no resource ID
-    private final Bitmap photoBitmap;
 
-    public NamePhotoPair(String name, int photoResId) {
+
+    public abstract boolean hasBitmap();
+    public NamePhotoPair(String name) {
         this.name = name;
-        this.photoResId = photoResId;
-        this.photoBitmap = null;
     }
 
-    public NamePhotoPair(String name, Bitmap photoBitmap) {
-        this.name = name;
-        this.photoResId = -1;
-        this.photoBitmap = photoBitmap;
+    public static class ResourcePhoto extends NamePhotoPair {
+        private int photoResId;  // -1 means no resource ID
+        public ResourcePhoto(String name, int photoResId) {
+            super(name);
+            this.photoResId = photoResId;
+        }
+        public int getPhotoResId() {
+            return photoResId;
+        }
+
+        public boolean hasBitmap() {
+            return false;
+        }
     }
+
+    public static class BitmapPhoto extends NamePhotoPair {
+
+        private Bitmap photoBitmap;
+
+        public BitmapPhoto(String name, Bitmap photoBitmap) {
+            super(name);
+            this.photoBitmap = photoBitmap;
+        }
+        public boolean hasBitmap() {
+            return true;
+        }
+        public Bitmap getPhotoBitmap() {
+            return photoBitmap;
+        }
+    }
+
 
     public String getName() {
         return name;
     }
 
-    public int getPhotoResId() {
-        return photoResId;
-    }
-
-    public Bitmap getPhotoBitmap() {
-        return photoBitmap;
-    }
-
-    public boolean hasBitmap() {
-        return photoBitmap != null;
-    }
 }
