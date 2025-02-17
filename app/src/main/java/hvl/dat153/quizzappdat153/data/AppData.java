@@ -30,12 +30,12 @@ public class AppData {
 
     // Add entry using resource ID
     public void addEntry(String name, int photoResId) {
-        namePhotoPairs.add(new NamePhotoPair(name, photoResId));
+        namePhotoPairs.add(new NamePhotoPair.ResourcePhoto(name, photoResId));
     }
 
     // Add entry using Bitmap
     public void addEntry(String name, Bitmap photoBitmap) {
-        namePhotoPairs.add(new NamePhotoPair(name, photoBitmap));
+        namePhotoPairs.add(new NamePhotoPair.BitmapPhoto(name, photoBitmap));
     }
 
     public void sortEntries(boolean ascending) {
@@ -61,15 +61,15 @@ public class AppData {
     }
 
     private void loadInitialData() {
-        namePhotoPairs.add(new NamePhotoPair("Cat", R.drawable.cat));
-        namePhotoPairs.add(new NamePhotoPair("Dog", R.drawable.dog));
-        namePhotoPairs.add(new NamePhotoPair("Rabbit", R.drawable.rabbit));
+        namePhotoPairs.add(new NamePhotoPair.ResourcePhoto("Cat", R.drawable.cat));
+        namePhotoPairs.add(new NamePhotoPair.ResourcePhoto("Dog", R.drawable.dog));
+        namePhotoPairs.add(new NamePhotoPair.ResourcePhoto("Rabbit", R.drawable.rabbit));
     }
 
     public void preloadSampleData() {
         namePhotoPairs.clear();
-        namePhotoPairs.add(new NamePhotoPair("Cat", R.drawable.cat));
-        namePhotoPairs.add(new NamePhotoPair("Dog", R.drawable.dog));
-        namePhotoPairs.add(new NamePhotoPair("Rabbit", R.drawable.rabbit));
+        namePhotoPairs.add(new NamePhotoPair.ResourcePhoto("Cat", R.drawable.cat));
+        namePhotoPairs.add(new NamePhotoPair.ResourcePhoto("Dog", R.drawable.dog));
+        namePhotoPairs.add(new NamePhotoPair.ResourcePhoto("Rabbit", R.drawable.rabbit));
     }
 }

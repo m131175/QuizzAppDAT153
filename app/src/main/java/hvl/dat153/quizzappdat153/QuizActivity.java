@@ -56,9 +56,9 @@ public class QuizActivity extends AppCompatActivity {
 
         // Display the image
         if (correctPair.hasBitmap()) {
-            questionImage.setImageBitmap(correctPair.getPhotoBitmap());
+            questionImage.setImageBitmap(((NamePhotoPair.BitmapPhoto)correctPair).getPhotoBitmap());
         } else {
-            questionImage.setImageResource(correctPair.getPhotoResId());
+            questionImage.setImageResource(((NamePhotoPair.ResourcePhoto)correctPair).getPhotoResId());
         }
 
         // Generate randomized options (one correct, two incorrect)
