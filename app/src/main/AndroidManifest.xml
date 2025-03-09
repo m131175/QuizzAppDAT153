@@ -12,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizzAppDAT153"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:enableOnBackInvokedCallback="true">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.QuizzAppDAT153">
@@ -24,9 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GalleryActivity" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".AddEntryActivity" />
+        <activity android:name=".ui.GalleryActivity" />
+        <activity android:name=".ui.QuizActivity" />
+        <activity android:name=".ui.AddEntryActivity" />
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE android.permission.CAMERA" />
 
