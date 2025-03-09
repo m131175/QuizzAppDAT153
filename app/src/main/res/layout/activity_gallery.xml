@@ -3,45 +3,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp">
 
-    <!-- Back Button -->
-    <Button
-        android:id="@+id/button_back"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/text_gallery_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
-        android:layout_marginBottom="16dp" />
+        android:text="Gallery"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="8dp" />
 
-    <!-- Add Entry Button -->
-    <Button
-        android:id="@+id/button_add_entry"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Entry"
-        android:layout_marginBottom="16dp" />
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center">
 
-    <!-- Sorting Buttons -->
-    <Button
-        android:id="@+id/button_sort_asc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sort A-Z"
-        android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/button_add_entry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Entry" />
 
-    <Button
-        android:id="@+id/button_sort_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sort Z-A"
-        android:layout_marginBottom="16dp" />
+        <Button
+            android:id="@+id/button_sort_asc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sort A-Z" />
 
-    <!-- RecyclerView for gallery items -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        <Button
+            android:id="@+id/button_sort_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sort Z-A" />
+    </LinearLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="8dp" />
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
 </LinearLayout>
