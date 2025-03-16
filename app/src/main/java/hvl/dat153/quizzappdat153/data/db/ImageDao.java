@@ -15,9 +15,6 @@ public interface ImageDao {
     @Query("SELECT * FROM images ORDER BY name ASC")
     LiveData<List<ImageEntity>> getAllImages();
 
-    @Query("DELETE FROM images")
-    void deleteAll();
-
     @Query("SELECT COUNT(*) FROM images")
     int getImageCount();
 }

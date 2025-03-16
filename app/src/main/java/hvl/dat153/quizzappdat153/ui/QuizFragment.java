@@ -22,7 +22,7 @@ import java.util.Collections;
 import java.util.List;
 import hvl.dat153.quizzappdat153.R;
 import hvl.dat153.quizzappdat153.data.model.ImageEntity;
-import hvl.dat153.quizzappdat153.data.viewmodel.ImageViewModel;
+import hvl.dat153.quizzappdat153.viewmodel.ImageViewModel;
 
 public class QuizFragment extends Fragment {
     private ImageView questionImage;

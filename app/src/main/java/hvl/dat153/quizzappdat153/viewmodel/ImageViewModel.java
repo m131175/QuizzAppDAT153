@@ -1,4 +1,4 @@
-package hvl.dat153.quizzappdat153.data.viewmodel;
+package hvl.dat153.quizzappdat153.viewmodel;
 
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
