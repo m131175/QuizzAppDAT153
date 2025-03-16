@@ -1,7 +1,6 @@
 package hvl.dat153.quizzappdat153.ui;
 
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import hvl.dat153.quizzappdat153.R;
 import hvl.dat153.quizzappdat153.data.model.ImageEntity;
-import hvl.dat153.quizzappdat153.data.viewmodel.ImageViewModel;
+import hvl.dat153.quizzappdat153.viewmodel.ImageViewModel;
 
 public class AddEntryActivity extends AppCompatActivity {
 

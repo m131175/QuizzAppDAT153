@@ -11,7 +11,6 @@ import androidx.test.espresso.idling.CountingIdlingResource;
 import hvl.dat153.quizzappdat153.R;
 
 public class QuizActivity extends AppCompatActivity {
-    private CountingIdlingResource idlingResource = new CountingIdlingResource("QUIZ");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,27 +32,6 @@ public class QuizActivity extends AppCompatActivity {
             getSupportFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
-        }
-    }
-
-    public IdlingResource getIdlingResource() {
-        return idlingResource;
-    }
-
-    @Nullable
-    public String getCurrentCorrectAnswer() {
-        QuizFragment fragment = (QuizFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.quiz_fragment_container);
-        return fragment != null ? fragment.getCorrectAnswer() : null;
-    }
-
-    public void incrementIdlingResource() {
-        idlingResource.increment();
-    }
-
-    public void decrementIdlingResource() {
-        if (!idlingResource.isIdleNow()) {
-            idlingResource.decrement();
         }
     }
 }
