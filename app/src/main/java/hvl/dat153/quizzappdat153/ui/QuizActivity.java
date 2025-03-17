@@ -2,6 +2,7 @@ package hvl.dat153.quizzappdat153.ui;
 
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,14 +25,18 @@ public class QuizActivity extends AppCompatActivity {
                     .addToBackStack(null)
                     .commit();
         }
-    }
 
-    @Override
-    public void onBackPressed() {
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-            getSupportFragmentManager().popBackStack();
-        } else {
-            super.onBackPressed();
-        }
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                    getSupportFragmentManager().popBackStack();
+                } else {
+                    setEnabled(false); // Disable callback temporarily
+                    getOnBackPressedDispatcher().onBackPressed(); // Call default behavior
+                }
+            }
+        });
     }
 }
