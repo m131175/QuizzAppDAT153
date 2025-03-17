@@ -13,6 +13,7 @@ The GalleryActivity should be displayed after clicking the button.
 
 Test Method:
 testGalleryButtonOpensGalleryActivity() (in MainActivityTest.java)
+
 Actual Result: Passed
 
 
@@ -35,6 +36,7 @@ The number of images in the gallery should increase by 1 after adding an image.
 
 Test Method:
 testAddingImageIncreasesListSize() (in GalleryActivityTest.java)
+
 Actual Result: Passed
 
 3. QuizActivityTest
@@ -50,6 +52,7 @@ Selecting an incorrect answer should only increase the attempt count.
 
 Test Method:
 testScoreUpdatesCorrectly() (in QuizActivityTest.java)
+
 Actual Result: Failed
 
 Issue: The correctAnswer variable does not reset correctly when loading a new question.
